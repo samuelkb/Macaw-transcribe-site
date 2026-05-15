@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const repoName = 'macaw-transcribe-site';
+const repoName = 'Macaw-transcribe-site';
 const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
 
 const nextConfig = {
