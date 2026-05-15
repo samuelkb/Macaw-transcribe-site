@@ -71,7 +71,7 @@ export function Header({ t, locale }: HeaderProps) {
               className="border-border text-text-secondary hover:bg-surface-subtle"
             >
               <Link
-                href="https://github.com"
+                href="https://github.com/samuelkb"
                 target="_blank"
                 rel="noopener noreferrer"
               >

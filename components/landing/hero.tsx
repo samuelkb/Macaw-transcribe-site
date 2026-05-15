@@ -64,7 +64,7 @@ export function Hero({ t, locale }: HeroProps) {
               className="border-border text-text-secondary hover:bg-surface-subtle px-8 h-12 text-base"
             >
               <Link
-                href="https://github.com"
+                href="https://github.com/samuelkb"
                 target="_blank"
                 rel="noopener noreferrer"
               >
