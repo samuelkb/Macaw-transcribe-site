@@ -25,6 +25,7 @@ export default function HomeES() {
     <main className="min-h-screen">
       <Header t={t} locale={locale} />
       <Hero t={t} locale={locale} />
+      <ProblemSection t={t} />
       <Footer t={t} locale={locale} />
     </main>
   );

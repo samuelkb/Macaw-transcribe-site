@@ -1,51 +1,51 @@
 import { Clock, Users, Shield, Cpu, RotateCcw } from 'lucide-react';
+import type { Translations } from '@/lib/translations';
 
-const problems = [
-  {
-    icon: Clock,
-    title: 'Long recordings are hard to review',
-    description:
-      'Hours of audio turn into walls of text. Scrubbing through recordings to verify transcripts is tedious and error-prone.',
-  },
-  {
-    icon: Users,
-    title: 'Speaker context gets lost',
-    description:
-      'Without clear diarization, conversations become confusing. Who said what matters, especially in interviews and research.',
-  },
-  {
-    icon: Shield,
-    title: 'Private audio deserves private infrastructure',
-    description:
-      "Sensitive conversations shouldn't require uploading to third-party servers. Your audio should stay under your control.",
-  },
-  {
-    icon: Cpu,
-    title: 'Local hardware is often underused',
-    description:
-      'Many self-hosted transcription workflows are not tuned for modern Mac hardware, turning powerful machines into slow, inefficient transcription boxes.',
-  },
-  {
-    icon: RotateCcw,
-    title: 'Errors show up too late',
-    description:
-      'You often discover accuracy problems only after the full transcript is done. Fixing one bad section should not mean starting the whole recording over.',
-  },
-];
+interface ProblemSectionProps {
+  t: Translations;
+}
 
-export function ProblemSection() {
+export function ProblemSection({ t }: ProblemSectionProps) {
+  const problems = [
+    {
+      icon: Clock,
+      title: t.problem.card1Title,
+      description: t.problem.card1Description,
+    },
+    {
+      icon: Users,
+      title: t.problem.card2Title,
+      description: t.problem.card2Description,
+    },
+    {
+      icon: Shield,
+      title: t.problem.card3Title,
+      description: t.problem.card3Description,
+    },
+    {
+      icon: Cpu,
+      title: t.problem.card4Title,
+      description: t.problem.card4Description,
+    },
+    {
+      icon: RotateCcw,
+      title: t.problem.card5Title,
+      description: t.problem.card5Description,
+    },
+  ];
   return (
     <section className="py-20 lg:py-28 bg-surface-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-semibold text-foreground tracking-tight mb-4 text-balance">
-            Long conversations hold{' '}
-            <span className="font-serif text-brand-primary">valuable</span>{' '}
-            knowledge
+            {t.problem.title}
+            <span className="font-serif text-brand-primary">
+              {t.problem.titleAccent}
+            </span>
+            {t.problem.titlePost}
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed text-pretty">
-            But most transcription tools are either too opaque, too
-            SaaS-dependent, or difficult to review carefully.
+            {t.problem.description}
           </p>
         </div>
 

@@ -17,7 +17,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Header t={t} locale={locale} />
       <Hero t={t} locale={locale} />
-      <ProblemSection />
+      <ProblemSection t={t} />
       <SolutionSection />
       <WorkflowSection />
       <UseCasesSection />
