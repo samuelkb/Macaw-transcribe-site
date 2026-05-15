@@ -46,6 +46,7 @@ const useCases = [
     subtitle: 'Reviewing private sessions',
     description:
       'Turn long conversations into reviewable notes while keeping sensitive audio under your own control.',
+    color: 'bg-brand-highlight',
   },
   {
     icon: Lock,
