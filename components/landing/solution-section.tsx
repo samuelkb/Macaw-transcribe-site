@@ -8,6 +8,11 @@ import {
   Gauge,
   Cpu,
 } from 'lucide-react';
+import type { Translations } from '@/lib/translations';
+
+interface SolutionSectionProps {
+  t: Translations;
+}
 
 const features = [
   {
@@ -48,25 +53,60 @@ const features = [
   },
 ];
 
-export function SolutionSection() {
+export function SolutionSection({ t }: SolutionSectionProps) {
+  const features = [
+    {
+      icon: Server,
+      title: t.solution.feature1Title,
+      description: t.solution.feature1Description,
+    },
+    {
+      icon: Layers,
+      title: t.solution.feature2Title,
+      description: t.solution.feature2Description,
+    },
+    {
+      icon: Users,
+      title: t.solution.feature3Title,
+      description: t.solution.feature3Description,
+    },
+    {
+      icon: Edit3,
+      title: t.solution.feature4Title,
+      description: t.solution.feature4Description,
+    },
+    {
+      icon: FileText,
+      title: t.solution.feature5Title,
+      description: t.solution.feature5Description,
+    },
+    {
+      icon: Download,
+      title: t.solution.feature6Title,
+      description: t.solution.feature6Description,
+    },
+  ];
   return (
     <section id="features" className="py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-8">
           <h2 className="text-3xl sm:text-4xl font-semibold text-foreground tracking-tight mb-4 text-balance">
-            A transcription workflow built for{' '}
-            <span className="font-serif text-brand-primary">control</span>,
-            review, and accuracy
+            {t.solution.title}
+            <span className="font-serif text-brand-primary">
+              {t.solution.titleAccent}
+            </span>
+            {t.solution.titlePost}
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed text-pretty">
-            Macaw Transcribe is designed around how you actually work with
-            long-form audio.
+            {t.solution.description}
           </p>
         </div>
+        {/* Main mockup container 
         <div className="mb-4 mt-4 inline-flex items-center gap-2 rounded-full border border-border bg-surface-subtle px-4 py-2 text-sm text-text-secondary">
           <Cpu className="h-4 w-4 text-brand-primary" />
           <span>First release optimized for macOS on Apple Silicon</span>
         </div>
+        */}
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (

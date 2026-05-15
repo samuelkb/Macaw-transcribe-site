@@ -26,6 +26,7 @@ export default function HomeES() {
       <Header t={t} locale={locale} />
       <Hero t={t} locale={locale} />
       <ProblemSection t={t} />
+      <SolutionSection t={t} />
       <Footer t={t} locale={locale} />
     </main>
   );

@@ -18,7 +18,7 @@ export default function Home() {
       <Header t={t} locale={locale} />
       <Hero t={t} locale={locale} />
       <ProblemSection t={t} />
-      <SolutionSection />
+      <SolutionSection t={t} />
       <WorkflowSection />
       <UseCasesSection />
       <DifferentiatorsSection />
